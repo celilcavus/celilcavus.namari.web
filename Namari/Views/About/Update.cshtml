@@ -1,0 +1,29 @@
+﻿@model About
+
+@using (Html.BeginForm("Update", "About", FormMethod.Post))
+{
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+    <label asp-for="Title"></label>
+    <input asp-for="Title" class="form-control" />
+    <br />
+
+    <label asp-for="Description"></label>
+    <textarea asp-for="Description" class="form-control"> </textarea>
+    <br />
+
+    <label asp-for="Icon"></label>
+    <input asp-for="Icon" class="form-control" />
+    <br />
+
+    <label asp-for="IconTitle"></label>
+    <input asp-for="IconTitle" class="form-control" />
+    <br />
+
+    <label asp-for="IconDescription"></label>
+    <input asp-for="IconDescription" class="form-control" />
+    <br />
+
+    <button class="btn btn-outline-dark" type="submit">Update</button>
+    <a asp-action="GetList" asp-controller="About" class="btn btn-outline-primary">Go to List</a>
+}

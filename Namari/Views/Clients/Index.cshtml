@@ -1,0 +1,13 @@
+﻿@model Clients
+
+@using (Html.BeginForm("Index", "Clients", FormMethod.Post))
+{
+    <div asp-validation-summary="All" class="text-danger"></div>
+
+
+    <label asp-for="Title"></label>
+    <input asp-for="Title" asp-action="Index" asp-controller="Clients" class="form-control"/>
+    <br />
+    <button class="btn btn-outline-dark" type="submit">Save</button>
+    <a asp-action="GetList" asp-controller="Clients" class="btn btn-outline-primary">Go To List</a>
+}
