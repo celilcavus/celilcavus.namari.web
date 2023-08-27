@@ -11,14 +11,18 @@ namespace _02_DataAccess.Repository
     {
         private readonly IClientsRepository clientsRepository;
         private readonly IAboutRepository aboutRepository;
+        private readonly ICustomerRepository customerRepository;
 
-        public RepositoryManager(IClientsRepository clientsRepository, IAboutRepository aboutRepository)
+        public RepositoryManager(IClientsRepository clientsRepository, IAboutRepository aboutRepository, ICustomerRepository customerRepository)
         {
             this.clientsRepository = clientsRepository;
             this.aboutRepository = aboutRepository;
+            this.customerRepository = customerRepository;
         }
 
         public IClientsRepository Clients => clientsRepository;
         public IAboutRepository About => aboutRepository;
+
+        public ICustomerRepository Customer => customerRepository;
     }
 }

@@ -12,5 +12,7 @@ namespace _02_DataAccess.Interfaces
 
         public IAboutRepository About { get; }
 
+        public ICustomerRepository Customer { get; }
+
     }
 }

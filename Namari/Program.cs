@@ -15,6 +15,7 @@ builder.Services.AddScoped<IClientsRepository, ClientsRepository>();
 builder.Services.AddScoped<IAboutRepository, AboutRepository>();
 builder.Services.AddScoped<ApplicationContext, ApplicationContext>();
 builder.Services.AddScoped<IRepositoryManager, RepositoryManager>();
+builder.Services.AddScoped<ICustomerRepository, CustomerRepository>();
 var app = builder.Build();
 
 

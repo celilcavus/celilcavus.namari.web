@@ -1,0 +1,28 @@
+﻿@model Customers
+
+
+@using(Html.BeginForm("Index","Customer",FormMethod.Post))
+{
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <br>
+
+    <label asp-for="Image">Image</label>
+    <input asp-for="Image" type="file" class="form-control"/>
+    <br />
+
+    <label asp-for="FirstName">FirstName</label>
+    <input asp-for="FirstName" class="form-control" />
+    <br />
+
+    <label asp-for="LastName">LastName</label>
+    <input asp-for="LastName" class="form-control" />
+    <br />
+
+    <label asp-for="Description">Description</label>
+    <textarea asp-for="Description"  class="form-control" style="height:200px;"></textarea>
+    <br />
+
+
+    <button class="btn btn-outline-primary" type="submit">Saved</button>
+    <a asp-action="GetCustomerList" asp-controller="Customer" class="btn btn-dark">Go To Customer List</a>
+}
