@@ -1,0 +1,29 @@
+﻿@model List<Services>
+
+<table class="table table-hovered">
+    <thead>
+        <tr>
+            <td>ID</td>
+            <td>Title</td>
+            <td>Description</td>
+            <td>Video Url</td>
+            <td>Update</td>
+            <td>Delete</td>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Title</td>
+                <td>@item.Description</td>
+                <td><a href="@item.VideoUrl">@item.Title</a></td>
+                <td><a asp-action="Update" aspasp-controller="Services" asp-route-id="@item.Id" class="btn btn-sm btn-warning">Update</a></td>
+                <td><a asp-action="Delete" aspasp-controller="Services" asp-route-id="@item.Id" class="btn btn-sm btn-danger">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-controller="Services" class="btn btn-dark">Back to Services</a>

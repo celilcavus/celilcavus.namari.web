@@ -1,0 +1,20 @@
+﻿@model Services
+
+@using(Html.BeginForm("Index","Services",FormMethod.Post))
+{
+    <div class="text-danger" asp-validation-summary="All"></div>
+    <br />
+
+
+    <label asp-for="Title"></label>
+    <input asp-for="Title" class="form-control"/>
+    <br />
+     <label asp-for="Description"></label>
+    <textarea asp-for="Description" class="form-control" style="height:100px;"></textarea>
+    <br />
+    <label asp-for="VideoUrl"></label>
+    <input asp-for="VideoUrl" class="form-control" />
+    <br />
+    <button class="btn btn-outline-primary" type="submit">Saved</button>
+    <a asp-action="GetServicesList" asp-controller="Services" class="btn btn-dark">Go to Services List</a>
+}

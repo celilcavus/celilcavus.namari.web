@@ -14,5 +14,9 @@ namespace _02_DataAccess.Interfaces
 
         public ICustomerRepository Customer { get; }
 
+        public IGalleryRepository Gallery { get; }
+
+        public IServicesRepository Services { get; }
+
     }
 }
